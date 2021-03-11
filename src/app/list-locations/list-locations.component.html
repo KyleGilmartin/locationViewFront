@@ -1,0 +1,29 @@
+<div class="card" (click)="openLg(content)">
+    <div class="card-horizontal">
+        <div class="img-square-wrapper">
+            <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">{{location.name}}</h4>
+            <p class="card-text">{{location.description}}</p>
+        </div>
+    </div>
+
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{location.name}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <p>{{location.name}}</p>
+        <app-today></app-today>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+</ng-template>

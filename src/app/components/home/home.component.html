@@ -1,0 +1,61 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Make a Post</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="dateOfBirth">Post</label>
+
+                <div class="input-group">
+                    <div class="formGroup">
+                        <input type="text" class="form-control" placeholder="locationName" #locationName required>
+                    </div>
+
+                    <div class="formGroup">
+                        <input type="password" class="form-control" placeholder="locationDescription" #locationDescription required>
+                    </div>
+                    <div class="formGroup">
+                        <input type="password" class="form-control" placeholder="longitude " #longitude required>
+                    </div>
+                    <div class="formGroup">
+                        <input type="password" class="form-control" placeholder="latitude" #latitude required>
+                    </div>
+
+                    <button>Image</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+</ng-template>
+
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                here, content here', making it look like readable</p>
+        </div>
+        <div class="col-2">
+            <button class="btn btnpost btn-lg btn-outline-primary text-right" (click)="open(content)">Post</button>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<div class="container postdiv">
+    <app-getlocations></app-getlocations>
+</div>
+<div class="container mapdiv">
+
+
+</div>
